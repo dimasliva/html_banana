@@ -147,3 +147,36 @@ footer {
   position: relative;
   bottom: 0;
 }
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Вертикальное расположение для мобильных устройств */
+    align-items: center; /* Центрирование элементов */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Отступы между элементами списка */
+  }
+
+  .container {
+    flex-direction: column; /* Вертикальное расположение контейнера */
+    margin: 10px; /* Уменьшение отступов для мобильных устройств */
+  }
+
+  .sidebar {
+    margin-right: 0; /* Убираем отступ справа */
+    margin-bottom: 20px; /* Добавляем отступ снизу для разделения с основным контентом */
+  }
+
+  .card-container {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(150px, 1fr)
+    ); /* Уменьшаем минимальную ширину карточек */
+  }
+
+  .card {
+    margin: 5px; /* Уменьшаем отступы между карточками */
+  }
+}
